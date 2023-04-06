@@ -38,7 +38,7 @@ public class CardServiceTest {
     @Test
     public void shouldSendFormPositive() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Вассисуалий-Апполон");
-        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+7911111111");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79111111111");
         driver.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         driver.findElement(By.cssSelector("button")).click();
         String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
@@ -89,7 +89,7 @@ public class CardServiceTest {
     @Test
     public void shouldValidateAgreement() {
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Сергей");
-        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+7911111111");
+        driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79111111111");
         driver.findElement(By.cssSelector("button")).click();
         assertTrue(driver.findElement(By.cssSelector("[data-test-id=agreement].input_invalid")).isDisplayed());
 
